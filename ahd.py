@@ -29,7 +29,7 @@ def to_word(raw_word):
 
 def to_ref(raw_href, raw_word):
     word = to_word(raw_word)
-    ref = 'ref:{}:{}'.format(raw_href.replace('!!DICTIONARY!!?file=', ''), word)
+    ref = 'ref:{0}:{1}'.format(raw_href.replace('!!DICTIONARY!!?file=', ''), word)
     return ref, word
 
 
@@ -55,8 +55,8 @@ def load_entry_content(filename):
                 if ref not in refs:
                     refs.append(ref)
                 line = line.replace(
-                    '<A HREF="{}">{}</A>'.format(raw_href, raw_word),
-                    '[{}][{}]'.format(ref_word, refs.index(ref) + 1)
+                    '<A HREF="{0}">{1}</A>'.format(raw_href, raw_word),
+                    '[{0}][{1}]'.format(ref_word, refs.index(ref) + 1)
                 )
             line = line.replace('*', '')
             line = re_em.sub(r'*\1*', line)
