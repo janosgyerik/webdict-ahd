@@ -98,7 +98,8 @@ class TestSearchOutput(unittest.TestCase):
         entry = self.dict.find('behold')[0]
         entry_content_dict = dict(entry.content['content'])
         self.assertEqual(
-            "Middle English *biholden*, from Old English *behaldan* : *be-*, be- + *healdan*, to hold; see [hold-1][2].",
+            "Middle English *biholden*, from Old English *behaldan* : "
+            "*be-*, be- + *healdan*, to hold; see [hold-1][2].",
             entry_content_dict['ETYMOLOGY']
         )
         self.assertEqual(
