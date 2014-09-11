@@ -33,7 +33,7 @@ class AmericanHeritageDictionaryCLI(CommandLineInterface):
         dl_items = entry.content['content']
         dl = dict(dl_items)
         for dt in [dt for dt, _ in dl_items]:
-            print dt
+            print(dt)
             self.print_dd(dl[dt])
             print('')
 
